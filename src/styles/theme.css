@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@config "../tailwind.config.js";
+
+:root {
+  --color-background: #0f1115; /* Charcoal base */
+  --color-foreground: #f8fafc;
+  --color-primary: #4f46e5; /* Deep indigo */
+  --color-secondary: #8b5cf6; /* Muted violet */
+  --color-accent: #ec4899; /* Soft magenta */
+  --color-muted: #94a3b8;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base styles to support the GSAP Menu overlay */
+#root {
+  isolation: isolate;
+  min-height: 100vh;
+}
+
+/* Hide scrollbar when lenis is active or menu is open */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
