@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -10,7 +10,7 @@ export default function Hero() {
         []
     );
 
-    useEffect(() => {
+    React.useEffect(() => {
         const id = window.setTimeout(() => {
             setWordIndex((prev) => (prev === rotatingWords.length - 1 ? 0 : prev + 1));
         }, 2200);
@@ -94,14 +94,14 @@ export default function Hero() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1, delay: 0.6 }}
                 >
-                    {["Custom builds", "Clear communication", "Built to ship"].map((chip) => (
+                    {/* {["Custom builds", "Clear communication", "Built to ship"].map((chip) => (
                         <div
                             key={chip}
                             className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-muted backdrop-blur-sm"
                         >
                             {chip}
                         </div>
-                    ))}
+                    ))} */}
                 </motion.div>
             </div>
         </section>

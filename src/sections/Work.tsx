@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
@@ -12,7 +12,7 @@ const projects = [
 ];
 
 export default function Work() {
-    const [selectedId, setSelectedId] = useState<number | null>(null);
+    const [selectedId, setSelectedId] = React.useState<number | null>(null);
 
     const selectedProject = projects.find(p => p.id === selectedId);
 

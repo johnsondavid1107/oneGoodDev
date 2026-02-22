@@ -29,7 +29,7 @@ const steps = [
 ];
 
 export default function Process() {
-    const containerRef = useRef<HTMLDivElement>(null);
+    const containerRef = React.useRef<HTMLDivElement>(null);
     const lineRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {

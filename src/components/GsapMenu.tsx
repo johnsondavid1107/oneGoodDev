@@ -328,13 +328,13 @@ export default function GsapMenu() {
               <ul className="menu-list">
                 <li className="menu-list-item" data-shape="1">
                   <a href="#about" onClick={closeMenu} className="nav-link w-inline-block">
-                    <p className="nav-link-text">About us</p>
+                    <p className="nav-link-text">About Me</p>
                     <div className="nav-link-hover-bg"></div>
                   </a>
                 </li>
                 <li className="menu-list-item" data-shape="2">
                   <a href="#work" onClick={closeMenu} className="nav-link w-inline-block">
-                    <p className="nav-link-text">Our work</p>
+                    <p className="nav-link-text">Projects</p>
                     <div className="nav-link-hover-bg"></div>
                   </a>
                 </li>
