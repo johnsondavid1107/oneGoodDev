@@ -23,9 +23,17 @@ export default {
                     '33%': { transform: 'translate(30px, -30px) scale(1.05)' },
                     '66%': { transform: 'translate(-20px, 20px) scale(0.95)' },
                 },
+                marquee: {
+                    from: { transform: 'translateX(0)' },
+                    to: { transform: 'translateX(calc(-100% - var(--gap)))' },
+                },
             },
             animation: {
                 blob: 'blob 9s ease-in-out infinite',
+                marquee: 'marquee var(--duration) linear infinite',
+            },
+            maxWidth: {
+                container: '1280px',
             },
         },
     },

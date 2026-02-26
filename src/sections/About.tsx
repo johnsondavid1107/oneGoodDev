@@ -13,13 +13,23 @@ export default function About() {
                     <h2 className="text-4xl md:text-5xl font-bold mb-12">The Philosophy</h2>
                     <div className="space-y-8 text-xl md:text-2xl text-muted leading-relaxed">
                         <p>
-                            Let's skip the agency fluff. I build software for everyday people, small business owners, and founders who need a reliable hands-on technical partner.
+
+
+                            There are a lot of AI tools out there — and trying to keep up with them can feel overwhelming.
+
+                            You don’t need to learn them. You just need the right one, built the right way.
+
+
+
+
+
+
                         </p>
                         <p className="text-foreground">
-                            It starts with listening. Before writing a single line of code, I want to understand exactly how your business works and where the friction is.
+                            I spend the time learning, testing, and working with modern AI tools so you don’t have to. Whether you’re running a business, exploring a new idea, or trying to solve a problem, you bring the vision and I help choose the right approach and build it into something real.
                         </p>
                         <p>
-                            I build thoughtfully and pragmatically using AI. You don't need buzzwords, you need results. Whether it's a completely new idea, streamlining a workflow, or fixing a pain point, the goal is always clear, robust, and maintainable software.
+                            It starts with listening, and it ends with software that actually makes your day easier.
                         </p>
                     </div>
                 </motion.div>
