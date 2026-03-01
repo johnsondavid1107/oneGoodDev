@@ -7,29 +7,27 @@ export default {
     theme: {
         extend: {
             colors: {
-                background: '#0f1115',
-                foreground: '#f8fafc',
-                primary: '#4f46e5',
-                secondary: '#8b5cf6',
-                accent: '#ec4899',
-                muted: '#94a3b8',
+                background: '#0B0B09',
+                'surface': '#151513',
+                'surface-alt': '#1A1A16',
+                foreground: '#E8E2D6',
+                primary: '#C8956C',
+                secondary: '#A07850',
+                accent: '#D4A574',
+                muted: '#847B6F',
+                border: 'rgba(232, 226, 214, 0.08)',
             },
             fontFamily: {
-                sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                sans: ['Outfit', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                serif: ['Cormorant Garamond', 'Georgia', 'serif'],
             },
             keyframes: {
-                blob: {
-                    '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
-                    '33%': { transform: 'translate(30px, -30px) scale(1.05)' },
-                    '66%': { transform: 'translate(-20px, 20px) scale(0.95)' },
-                },
                 marquee: {
                     from: { transform: 'translateX(0)' },
                     to: { transform: 'translateX(calc(-100% - var(--gap)))' },
                 },
             },
             animation: {
-                blob: 'blob 9s ease-in-out infinite',
                 marquee: 'marquee var(--duration) linear infinite',
             },
             maxWidth: {

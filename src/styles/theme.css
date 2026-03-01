@@ -3,18 +3,20 @@
 @config "../tailwind.config.js";
 
 :root {
-  --color-background: #0f1115; /* Charcoal base */
-  --color-foreground: #f8fafc;
-  --color-primary: #4f46e5; /* Deep indigo */
-  --color-secondary: #8b5cf6; /* Muted violet */
-  --color-accent: #ec4899; /* Soft magenta */
-  --color-muted: #94a3b8;
+  --color-background: #0B0B09;
+  --color-surface: #151513;
+  --color-surface-alt: #1A1A16;
+  --color-foreground: #E8E2D6;
+  --color-primary: #C8956C;
+  --color-secondary: #A07850;
+  --color-accent: #D4A574;
+  --color-muted: #847B6F;
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Outfit', sans-serif;
   overflow-x: hidden;
   margin: 0;
   padding: 0;

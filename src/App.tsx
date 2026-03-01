@@ -29,7 +29,7 @@ function App() {
   }, [])
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen grain-overlay">
       <GsapMenu />
       <main>
         <Hero />
@@ -40,8 +40,8 @@ function App() {
         <Testimonials />
         <Contact />
       </main>
-      <footer className="py-12 px-6 border-t border-white/5 text-center text-muted text-sm">
-        <p>© {new Date().getFullYear()} One Good Dev. All rights reserved.</p>
+      <footer className="py-16 px-6 border-t border-foreground/[0.04] text-center">
+        <p className="text-muted/60 text-xs tracking-[0.15em] uppercase font-light">© {new Date().getFullYear()} One Good Dev</p>
       </footer>
     </div>
   )

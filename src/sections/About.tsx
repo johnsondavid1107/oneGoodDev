@@ -10,26 +10,17 @@ export default function About() {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold mb-12">The Philosophy</h2>
-                    <div className="space-y-8 text-xl md:text-2xl text-muted leading-relaxed">
+                    <span className="text-primary font-sans text-xs tracking-[0.2em] uppercase mb-6 block font-medium">The promise</span>
+                    <h2 className="font-serif text-4xl md:text-6xl font-500 mb-16 tracking-tight">You won't have to worry...</h2>
+                    <div className="space-y-10 text-lg md:text-2xl text-muted leading-[1.8] font-light">
                         <p>
-
-
-                            There are a lot of AI tools out there — and trying to keep up with them can feel overwhelming.
-
-                            You don’t need to learn them. You just need the right one, built the right way.
-
-
-
-
-
-
+                            There are <i>hundreds</i> of AI tools out there, and new ones every week. It's not a contest over which one is best — it's about knowing which one is right for what you actually need done.
                         </p>
-                        <p className="text-foreground">
-                            I spend the time learning, testing, and working with modern AI tools so you don’t have to. Whether you’re running a business, exploring a new idea, or trying to solve a problem, you bring the vision and I help choose the right approach and build it into something real.
+                        <p className="text-foreground font-normal">
+                            That's my job, not yours. You tell me the problem or describe the vision, and I take it from there — choosing the right approach, the right tools, and handling every detail so you never have to think about the technology behind it.  <br />All you need is one good dev..
                         </p>
                         <p>
-                            It starts with listening, and it ends with software that actually makes your day easier.
+                            Think of it as white glove service for bringing ideas to life. It starts with a conversation, and it ends with something that actually works — and actually makes your day easier.
                         </p>
                     </div>
                 </motion.div>
