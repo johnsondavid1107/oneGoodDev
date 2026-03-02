@@ -5,32 +5,32 @@ const servicesList = [
     {
         title: 'Custom Platforms',
         desc: 'Whether it\'s an internal tool or a customer-facing product, I\'ll build exactly what your business needs — nothing more, nothing less.',
-        video: '/videos/custom.mp4',
+        video: 'videos/custom.mp4',
     },
     {
         title: 'Mobile Apps',
         desc: 'An app that puts your business directly in your customers\' hands, designed to feel natural from the first tap.',
-        video: '/videos/mobile.mp4',
+        video: 'videos/mobile.mp4',
     },
     {
         title: 'Idea Validation',
         desc: 'Not sure if your idea will work? I\'ll build a focused prototype so you can test it with real people — before you commit your full budget.',
-        video: '/videos/idea.mp4',
+        video: 'videos/idea.mp4',
     },
     {
         title: 'Workflow Automation',
         desc: 'If you\'re copying data between spreadsheets or juggling five tools to do one thing, I\'ll make that go away.',
-        video: '/videos/automation.mp4',
+        video: 'videos/automation.mp4',
     },
     {
         title: 'Design Refinement',
         desc: 'Something about your product feels off but you can\'t put your finger on it? I\'ll find it and fix it.',
-        video: '/videos/design.mp4',
+        video: 'videos/design.mp4',
     },
     {
         title: 'Career Materials',
         desc: 'A sharp resume and polished online presence that gets you past the filter and into the conversation.',
-        video: '/videos/career.mp4',
+        video: 'videos/career.mp4',
     }
 ];
 
