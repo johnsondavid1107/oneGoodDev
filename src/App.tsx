@@ -2,12 +2,13 @@ import { useEffect } from 'react'
 import Lenis from 'lenis'
 import GsapMenu from './components/GsapMenu'
 import Hero from './sections/Hero'
-import About from './sections/About'
+import Intentions from './sections/Intentions'
 import Services from './sections/Services'
 import Work from './sections/Work'
 import Process from './sections/Process'
 import Testimonials from './sections/Testimonials'
 import Contact from './sections/Contact'
+import AboutMe from './sections/AboutMe'
 
 function App() {
   useEffect(() => {
@@ -33,12 +34,13 @@ function App() {
       <GsapMenu />
       <main>
         <Hero />
-        <About />
+        <Intentions />
         <Services />
         <Process />
         <Work />
         <Testimonials />
         <Contact />
+        <AboutMe />
       </main>
       <footer className="py-16 px-6 border-t border-foreground/[0.04] text-center">
         <p className="text-muted/60 text-xs tracking-[0.15em] uppercase font-light">© {new Date().getFullYear()} One Good Dev</p>
