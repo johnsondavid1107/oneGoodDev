@@ -21,15 +21,6 @@ export default {
                 sans: ['Outfit', 'ui-sans-serif', 'system-ui', 'sans-serif'],
                 serif: ['Cormorant Garamond', 'Georgia', 'serif'],
             },
-            keyframes: {
-                marquee: {
-                    from: { transform: 'translateX(0)' },
-                    to: { transform: 'translateX(calc(-100% - var(--gap)))' },
-                },
-            },
-            animation: {
-                marquee: 'marquee var(--duration) linear infinite',
-            },
             maxWidth: {
                 container: '1280px',
             },

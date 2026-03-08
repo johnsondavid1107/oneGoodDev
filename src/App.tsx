@@ -9,6 +9,7 @@ import Process from './sections/Process'
 import Testimonials from './sections/Testimonials'
 import Contact from './sections/Contact'
 import AboutMe from './sections/AboutMe'
+import RpsGame from './sections/RpsGame'
 
 function App() {
   useEffect(() => {
@@ -41,6 +42,7 @@ function App() {
         <Testimonials />
         <Contact />
         <AboutMe />
+        <RpsGame />
       </main>
       <footer className="py-16 px-6 border-t border-foreground/[0.04] text-center">
         <p className="text-muted/60 text-xs tracking-[0.15em] uppercase font-light">© {new Date().getFullYear()} One Good Dev</p>

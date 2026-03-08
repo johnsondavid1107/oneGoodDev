@@ -15,7 +15,7 @@ export default function Hero() {
         }, 2200);
         return () => window.clearTimeout(id);
     }, [wordIndex, rotatingWords.length]);
-  
+
     return (
         <section
             id="hero"
@@ -45,7 +45,7 @@ export default function Hero() {
                         You bring the vision
                         <br />
                         I'll bring the <br />{" "}
-                        <span className="relative inline-flex justify-center align-baseline overflow-hidden h-[1.0em] w-[11ch]">
+                        <span className="relative inline-flex justify-center align-baseline overflow-hidden h-[1.2em] w-[11ch]">
                             {rotatingWords.map((word, i) => (
                                 <motion.span
                                     key={word}

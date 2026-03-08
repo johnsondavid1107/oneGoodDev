@@ -1,4 +1,6 @@
+import { useRef, useEffect, useCallback, useState } from 'react';
 import { motion } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const projects = [
     { id: 1, name: 'Workflow Automator', tags: ['Operations', 'Logistics'], desc: 'Replaced five disconnected tools with one dashboard. The team got 20 hours back every week.' },
@@ -8,6 +10,10 @@ const projects = [
     { id: 5, name: 'Inventory Tracker', tags: ['Warehouse', 'Offline'], desc: 'Warehouse staff scan barcodes and update inventory on a tablet — even without wifi.' },
     { id: 6, name: 'Clinic Scheduling', tags: ['Healthcare', 'Scheduling'], desc: 'Patients book their own appointments. Front desk staff stopped drowning in phone calls.' },
 ];
+
+const GAP = 24; // matches gap-6
+const CARD_WIDTH = 320;
+const SPEED = 0.5; // pixels per frame
 
 function ProjectCard({ name, tags, desc }: { name: string; tags: string[]; desc: string }) {
     return (
@@ -33,6 +39,51 @@ function ProjectCard({ name, tags, desc }: { name: string; tags: string[]; desc:
 }
 
 export default function Work() {
+    const scrollRef = useRef<HTMLDivElement>(null);
+    const rafRef = useRef<number>(0);
+    const [hovered, setHovered] = useState(false);
+
+    // Width of one full set of cards
+    const setWidth = projects.length * (CARD_WIDTH + GAP);
+
+    // Auto-scroll via requestAnimationFrame
+    const animate = useCallback(() => {
+        const el = scrollRef.current;
+        if (!el) return;
+
+        el.scrollLeft += SPEED;
+
+        // Seamless loop: when we've scrolled past the first set, jump back
+        if (el.scrollLeft >= setWidth) {
+            el.scrollLeft -= setWidth;
+        }
+
+        rafRef.current = requestAnimationFrame(animate);
+    }, [setWidth]);
+
+    useEffect(() => {
+        if (!hovered) {
+            rafRef.current = requestAnimationFrame(animate);
+        }
+        return () => cancelAnimationFrame(rafRef.current);
+    }, [hovered, animate]);
+
+    const handleMouseEnter = () => {
+        setHovered(true);
+        cancelAnimationFrame(rafRef.current);
+    };
+
+    const handleMouseLeave = () => {
+        setHovered(false);
+    };
+
+    const scroll = (direction: 'left' | 'right') => {
+        scrollRef.current?.scrollBy({
+            left: direction === 'left' ? -340 : 340,
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <section id="work" className="py-32 bg-surface overflow-hidden">
             <div className="max-w-6xl mx-auto px-6">
@@ -51,22 +102,47 @@ export default function Work() {
                 </motion.div>
             </div>
 
-            <div className="relative flex w-full flex-col items-center justify-center">
-                <div className="group flex [--gap:1.5rem] [gap:var(--gap)] [--duration:35s] overflow-hidden">
-                    <div className="flex shrink-0 [gap:var(--gap)] animate-marquee group-hover:[animation-play-state:paused]">
-                        {projects.map((project) => (
-                            <ProjectCard key={`a-${project.id}`} {...project} />
-                        ))}
-                    </div>
-                    <div className="flex shrink-0 [gap:var(--gap)] animate-marquee group-hover:[animation-play-state:paused]" aria-hidden>
-                        {projects.map((project) => (
-                            <ProjectCard key={`b-${project.id}`} {...project} />
-                        ))}
-                    </div>
+            <div
+                className="relative"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+            >
+                <div
+                    ref={scrollRef}
+                    className="flex gap-6 overflow-x-auto"
+                    style={{
+                        scrollbarWidth: 'none',
+                        msOverflowStyle: 'none',
+                        WebkitOverflowScrolling: 'touch',
+                    }}
+                >
+                    {/* Render 3 sets for seamless infinite loop */}
+                    {[0, 1, 2].map((setIndex) =>
+                        projects.map((project) => (
+                            <ProjectCard key={`${setIndex}-${project.id}`} {...project} />
+                        ))
+                    )}
                 </div>
 
-                <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-surface" />
-                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-surface" />
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-surface" />
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-surface" />
+            </div>
+
+            <div className="max-w-6xl mx-auto px-6 mt-8 flex justify-end gap-3">
+                <button
+                    onClick={() => scroll('left')}
+                    className="p-3 rounded-lg border border-foreground/10 text-foreground/60 hover:border-primary/30 hover:text-primary transition-all duration-200 cursor-pointer"
+                    aria-label="Scroll left"
+                >
+                    <ChevronLeft size={20} />
+                </button>
+                <button
+                    onClick={() => scroll('right')}
+                    className="p-3 rounded-lg border border-foreground/10 text-foreground/60 hover:border-primary/30 hover:text-primary transition-all duration-200 cursor-pointer"
+                    aria-label="Scroll right"
+                >
+                    <ChevronRight size={20} />
+                </button>
             </div>
         </section>
     );

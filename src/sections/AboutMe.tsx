@@ -2,16 +2,16 @@ import { motion } from 'framer-motion';
 
 const photos = [
   {
-    src: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&h=1200&fit=crop',
-    alt: 'Placeholder photo 1',
+    src: 'img/kids.jpeg',
+    alt: 'kids',
   },
   {
-    src: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=600&fit=crop',
-    alt: 'Placeholder photo 2',
+    src: 'img/piper.JPG',
+    alt: 'me',
   },
   {
-    src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&h=600&fit=crop',
-    alt: 'Placeholder photo 3',
+    src: 'img/us.jpeg',
+    alt: 'couple with NYC in the background',
   },
 ];
 
@@ -38,13 +38,12 @@ export default function AboutMe() {
           <div className="flex flex-col justify-end lg:mt-12">
             <div className="space-y-5 text-muted text-base md:text-lg leading-relaxed font-light">
               <p>
-                I'm a developer who believes technology should solve real problems for real people.
+                I started my career as a Hotel Director, then I taught myself how to code.
                 My background spans full-stack development, AI integration, and building tools that
                 actually get used.
               </p>
               <p>
-                Every project I take on gets my full attention. No shortcuts, no half-measures —
-                just honest work that speaks for itself.
+                Outside of code I, alongside my loving wife, are quite busy raising our rowdy bunch. Our home is loud, joyful, and full of curiosity. Family keeps me grounded, reminds me what truly matters, and inspires me to build thoughtful things and make everyday life a little easier for others.
               </p>
             </div>
           </div>

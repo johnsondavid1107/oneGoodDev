@@ -287,23 +287,6 @@ body {
   border-radius: 2px;
 }
 
-/* ===== Marquee animation ===== */
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(calc(-100% - var(--gap))); }
-}
-
-.animate-marquee {
-  animation: marquee var(--duration, 40s) linear infinite;
-}
-
-/* ===== Reduced Motion ===== */
-@media (prefers-reduced-motion: reduce) {
-  .animate-marquee {
-    animation-play-state: paused;
-  }
-}
-
 /* ===== Section divider line ===== */
 .section-rule {
   height: 1px;

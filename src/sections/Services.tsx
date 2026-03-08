@@ -128,7 +128,7 @@ export default function Services() {
                     <h2 className="font-serif text-4xl md:text-6xl font-500 tracking-tight">Services</h2>
                 </motion.div>
 
-                <div className="space-y-6 md:space-y-8 pb-[40vh]">
+                <div className="space-y-6 md:space-y-8 pb-[20vh]">
                     {servicesList.map((service, i) => (
                         <ServiceCard key={i} service={service} index={i} />
                     ))}

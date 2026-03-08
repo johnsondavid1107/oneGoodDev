@@ -115,6 +115,7 @@ dist
 
 # Claude
 .claude
+CLAUDE.md
 
 # DynamoDB Local files
 .dynamodb/
