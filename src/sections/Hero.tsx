@@ -38,8 +38,10 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                 >
                     <span className="text-primary font-sans font-medium tracking-[0.2em] uppercase text-xs mb-8 block">
-                        One Good Dev
+                        AI Services Conceirge
                     </span>
+
+
 
                     <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-500 tracking-tight mb-8 text-foreground">
                         You bring the vision
@@ -66,7 +68,7 @@ export default function Hero() {
 
                     <p className="text-lg md:text-2xl text-muted max-w-2xl mx-auto mb-14 font-light leading-relaxed">
                         You shouldn't have to learn AI tools or figure out where to start.
-                        Just tell me what you need — I'll take it from there.
+                        That's what I am here for.
                     </p>
                 </motion.div>
 
@@ -80,7 +82,7 @@ export default function Hero() {
                         href="#contact"
                         className="px-8 py-4 bg-primary text-background rounded-lg font-medium transition-all duration-200 hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[5px_5px_0px_0px_rgba(200,149,108,0.25)] shadow-[3px_3px_0px_0px_rgba(200,149,108,0.2)] cursor-pointer text-sm tracking-wide"
                     >
-                        Tell me what you need
+                        Inquire
                     </a>
                     <a
                         href="#work"

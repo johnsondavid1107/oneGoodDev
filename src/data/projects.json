@@ -1,0 +1,68 @@
+[
+  {
+    "id": "1",
+    "name": "Peelo",
+    "desc": "Family fun guessing game for all ages to play.",
+    "tags": [
+      "games",
+      "fun"
+    ],
+    "liveUrl": "https://peel-o.com/",
+    "thumbnail": "/img/projects/1777563997012.png"
+  },
+  {
+    "id": "2",
+    "name": "Boutique E-commerce",
+    "tags": [
+      "Retail",
+      "Online Store"
+    ],
+    "desc": "A premium shopping experience that made buying feel as luxurious as the products themselves.",
+    "liveUrl": "",
+    "thumbnail": ""
+  },
+  {
+    "id": "3",
+    "name": "Local Services App",
+    "tags": [
+      "Mobile",
+      "Booking"
+    ],
+    "desc": "Customers book and track home services in real-time from their phone. No more phone tag.",
+    "liveUrl": "",
+    "thumbnail": ""
+  },
+  {
+    "id": "4",
+    "name": "Startup MVP",
+    "tags": [
+      "Startup",
+      "Validation"
+    ],
+    "desc": "Took a founder from napkin sketch to working product in 4 weeks. They raised their seed round.",
+    "liveUrl": "",
+    "thumbnail": ""
+  },
+  {
+    "id": "5",
+    "name": "Inventory Tracker",
+    "tags": [
+      "Warehouse",
+      "Offline"
+    ],
+    "desc": "Warehouse staff scan barcodes and update inventory on a tablet — even without wifi.",
+    "liveUrl": "",
+    "thumbnail": ""
+  },
+  {
+    "id": "6",
+    "name": "Clinic Scheduling",
+    "tags": [
+      "Healthcare",
+      "Scheduling"
+    ],
+    "desc": "Patients book their own appointments. Front desk staff stopped drowning in phone calls.",
+    "liveUrl": "",
+    "thumbnail": ""
+  }
+]
